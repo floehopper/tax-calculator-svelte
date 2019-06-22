@@ -1,4 +1,6 @@
 <script>
+  import NationalInsuranceBarGraph from './NationalInsuranceBarGraph.svelte';
+
   class TaxBand {
     constructor (minimum, maximum, rateInPercent) {
       this.minimum = minimum
@@ -104,4 +106,6 @@
   </label>
   <p>Employee contributions: £{ employeeContributions }</p>
   <p>Employer contributions: £{ employerContributions }</p>
+
+  <NationalInsuranceBarGraph {employeeContributions} {employerContributions} />
 </div>
