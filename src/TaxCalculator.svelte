@@ -87,10 +87,6 @@
     return Number.parseFloat(amount).toFixed(2);
   }
 
-  function updateSalary(event) {
-    salary = event.target.value;
-  }
-
   const employeeCalculator = EmployeeNationalInsurance.for2018to2019();
   const employerCalculator = EmployerNationalInsurance.for2018to2019();
 
@@ -104,7 +100,7 @@
 
 <div>
   <label>
-    Salary: £<input type="number" value="{salary}" on:change={updateSalary}/>
+    Salary: £<input type="number" bind:value={salary}/>
   </label>
   <p>Employee contributions: £{ employeeContributions }</p>
   <p>Employer contributions: £{ employerContributions }</p>
